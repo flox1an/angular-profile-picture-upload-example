@@ -1,27 +1,25 @@
-# Angulavatar
+# Angular Profile Picture Upload Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+This is a small example on how to use the ng2-file-upload module to add a profile image with drag and drop capability.
+
+* Angular 4
+* ng2-file-upload
+* File upload through drag and drop
+* File upload through click and file selector
+
+This example is *not fully working* without a service that stores images. This service is not included. The code is meant
+to be taken as a reference and built upon.
+
+## Screenshots
+
+![Empty Profile Picture](images/screen1.png)
+![Profile Picture after Upload](images/screen2.png)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
