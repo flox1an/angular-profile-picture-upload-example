@@ -1,0 +1,41 @@
+
+.profile-picture {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height:300px;
+  background-color: #ddd;
+  border-radius: 1em;
+}
+
+.profile-picture img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 1em;
+}
+
+.profile-picture label {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 3;
+}
+.profile-picture .drag-over .infotext {
+  color: white;
+  border: dashed 5px white;
+}
+.profile-picture .infotext {
+  margin-left: 5px;
+  margin-top: 5px;
+  height: 290px;
+  width: 290px;
+  vertical-align: middle;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  border: dashed 3px rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding-top: 110px;
+  font-size: 150%;
+}
