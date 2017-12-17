@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 
 @Component({
@@ -8,10 +8,16 @@ import { FileUploader } from 'ng2-file-upload';
 })
 export class ProfilePictureComponent implements OnInit {
   public uploader: FileUploader;
-  private hasDragOver= false;
-  @Input() editmode = false;
-  @Output() urlChange = new EventEmitter();
-  @Input() url = '';
+  private hasDragOver = false;
+
+  @Input()
+  private editmode = false;
+
+  @Input()
+  private url = '';
+
+  @Output()
+  private urlChange = new EventEmitter();
 
   constructor() {
     this.uploader = new FileUploader({
@@ -21,8 +27,9 @@ export class ProfilePictureComponent implements OnInit {
     });
 
     this.uploader.response.subscribe(res => {
-       this.url = 'http://localhost:9090/get/' + JSON.parse(res).id;
-       this.urlChange.emit(this.url);
+      // Upload returns a JSON with the image ID
+      this.url = 'http://localhost:9090/get/' + JSON.parse(res).id;
+      this.urlChange.emit(this.url);
     });
   }
 

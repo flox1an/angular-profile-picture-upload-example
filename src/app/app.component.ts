@@ -1,6 +1,5 @@
 
 import { Component, ViewChild, Injectable } from '@angular/core';
-import { UploadService } from './upload.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +11,11 @@ import { UploadService } from './upload.service';
 export class AppComponent {
 
   public editEnabled = true;
-  public picurl = 'http://localhost:9090/get/5a3686df69f925a64c6c24e8';
+  public picurl: string;
 
   constructor() {}
 
+  public clear() {
+    this.picurl = '';
+  }
 }

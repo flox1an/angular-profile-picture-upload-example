@@ -14,6 +14,7 @@
           <label for="cbeditmode">Edit mode</label>
           <input #cbeditmode id="cbeditmode" [checked]="editEnabled" (change)="editEnabled=cbeditmode.checked" type="checkbox">
       </div>
+      <button class="button" (click)="clear()">Clear</button>
       {{picurl}}
     </div>
   </div>
