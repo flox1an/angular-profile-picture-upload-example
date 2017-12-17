@@ -22,10 +22,12 @@
   position: relative;
   z-index: 3;
 }
+
 .profile-picture .drag-over .infotext {
   color: white;
   border: dashed 5px white;
 }
+
 .profile-picture .infotext {
   margin-left: 5px;
   margin-top: 5px;

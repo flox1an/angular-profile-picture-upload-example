@@ -11,29 +11,9 @@ import { UploadService } from './upload.service';
 @Injectable()
 export class AppComponent {
 
+  public editEnabled = true;
+  public picurl = 'http://localhost:9090/get/5a3686df69f925a64c6c24e8';
 
-  title = 'app';
-
-  @ViewChild('fileInput') fileInput;
-
-  constructor(private uploadService: UploadService) {
-
-  }
-
-/* custom file upload
-  addFile(): void {
-      const fi = this.fileInput.nativeElement;
-      if (fi.files && fi.files[0]) {
-          const fileToUpload = fi.files[0];
-          this.uploadService
-              .upload(fileToUpload)
-              .subscribe(fileId => {
-                  console.log(fileId);
-                  this.imgurl = 'http://localhost:9090/get/' + fileId.id;
-              });
-      }
-  }
-  */
-
+  constructor() {}
 
 }

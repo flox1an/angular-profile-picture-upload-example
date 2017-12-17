@@ -1,12 +1,20 @@
-
 <div class="container">
 
+  <h2>Profile Picture Upload</h2>
+
   <div class="row">
-    <h2>Profile Picture Upload</h2>
     <div class="col">
-
-        <app-profile-picture></app-profile-picture>
-
+      <app-profile-picture [(url)]=picurl [editmode]=editEnabled></app-profile-picture>
     </div>
-
+  </div>
+  <div class="row">
+    <h3>Settings</h3>
+    <div class="col">
+        <div class="form-group">
+          <label for="cbeditmode">Edit mode</label>
+          <input #cbeditmode id="cbeditmode" [checked]="editEnabled" (change)="editEnabled=cbeditmode.checked" type="checkbox">
+      </div>
+      {{picurl}}
+    </div>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="profile-picture">
-  <img *ngIf="imgurl" width=300 height=300 src="{{imgurl}}" />
-  <label for="uploader-input" ng2FileDrop [ngClass]="{'drag-over': hasDragOver}" (fileOver)="fileOver($event)" [uploader]="uploader">
+  <img *ngIf="url" width=300 height=300 src="{{url}}" />
+  <label *ngIf="editmode" for="uploader-input" ng2FileDrop [ngClass]="{'drag-over': hasDragOver}" (fileOver)="fileOver($event)" [uploader]="uploader">
     <div class="infotext">Drop your picture<br>or click to upload</div>
   </label>
-  <input type="file" ng2FileSelect [uploader]="uploader" id="uploader-input" style="display:none" />
+  <input *ngIf="editmode" type="file" ng2FileSelect [uploader]="uploader" id="uploader-input" style="display:none" />
 </div>
